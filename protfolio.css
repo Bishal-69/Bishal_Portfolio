@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/** google fomt */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    /** google font */
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /**to place all element in same rows */
+}
+
+.list {
+    display: flex;
+    /** to make all element in rows */
+    gap: 40px;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    /** horizonally center */
+    align-items: center;
+    /** vertically center */
+    position: fixed;
+
+}
+
+.list li {
+    list-style-type: none;
+
+}
+
+.list li a {
+    text-decoration: solid;
+    font-size: 1rem;
+    /** 16 px */
+    color: aquamarine;
+    position: relative;
+}
+
+.list li a::after {
+    content: '';
+    width: 0;
+    height: .1rem;
+    background: aquamarine;
+    transition: width .5s;
+    /**width ma transaction */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.list li a:hover::after,
+.list li a.active::after {
+    width: 100%;
+}
+
+.left {
+    background-color: rgb(23, 24, 25);
+    width: 70%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    background: linear-gradient(rgb(23, 24, 25), rgb(74, 80, 85));
+    /** was grey but used as this to gave shaded look */
+    width: 30%;
+}
+
+.icons .fa-brands {
+    color: white;
+    font-size: 30px;
+    transition: color 0.5s ease;
+    /* Add a transition effect */
+
+}
+
+.icons .fa-brands:hover {
+    color: #72aae6;
+
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+
+}
+
+.content {
+    padding-left: 40px;
+    color: white;
+}
+
+.content h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.content h3 span {
+    color: #007BFF;
+    font-size: 25px;
+}
+
+.content h1 {
+    font-size: 50px;
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+
+.detail {
+    width: 75%;
+    line-height: 23px;
+}
+
+.buttons button {
+    border: 1px solid aquamarine;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.buttons .Hire {
+    background-color: aqua;
+    margin-right: 10px;
+    width: 90px;
+}
+
+.buttons .Hire:hover {
+    background-color: transparent;
+    color: aquamarine;
+    transition: .3s ease;
+}
+
+.buttons .Hire:active {
+    background-color: #0c8d44;
+    border-color: transparent;
+    color: black;
+}
+
+.buttons .Resume {
+    width: 130px;
+    color: aquamarine;
+    background-color: transparent;
+}
+
+.buttons .Resume:hover {
+    background-color: aqua;
+    color: black;
+    transition: .3s ease;
+}
+
+.buttons .Resume:active {
+    background-color: #0c8d44;
+    border-color: transparent;
+    color: black;
+}
+
+.design .circle {
+    aspect-ratio: 1;
+    /** this will make the height same as width for each circle */
+    position: absolute;
+    border-radius: 20%;
+    top: 50%;
+    left: 70.31%;
+    transform: translate(-50%, -50%);
+    /** X axis and y axis */
+}
+
+.circle:nth-child(1) {
+    background: linear-gradient(90deg, transparent 50%, rgb(23, 24, 25) 50%);
+    /** color distribution and 90 deg to vertically display the color */
+    width: 27rem;
+
+
+}
+
+.circle:nth-child(2) {
+    width: 20rem;
+    background-image: url("IMG_20240526_080214.jpg");
+    background-size: 100%;
+    border: .5rem solid white;
+    /** hard bc color */
+
+    box-shadow: 0 0 1rem #ffff
+        /** x axis  y axis is 0 0 */
+        , inset 0 0 1rem white,
+        /** to give more good look shoadow from outside */
+
+        0 0 2rem #3877ff,
+        /** give blue color form outside */
+        inset 0 0 2rem #3877ff,
+        /** give blue color form inside 2nt child box */
+
+        0 0 4rem #3877ff,
+        /** more spread to outside */
+        inset 0 0 4rem #3877ff;
+    /** more spread to inside */
+}
+
+.main2 {
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgb(23, 24, 25);
+
+}
+
+
+.main2 h2 {
+    color: aqua;
+    margin-left: 110px;
+    padding-top: 30px;
+
+}
+
+.main2 .fa-solid {
+    color: white;
+    font-size: large;
+    position: relative;
+    top: 56px;
+    left: 20%;
+}
+
+hr {
+    border: 0;
+    background-color: aquamarine;
+    height: 1px;
+    margin: 0 60px 0 60px;
+}
+
+.main2 .line {
+    background-color: white;
+    width: 80%;
+    height: 1px;
+    margin: 40px 0 0 120px;
+    display: flex;
+}
+
+.line .vertical {
+    height: 20vh;
+    width: 1px;
+    background-color: white;
+    margin: 0 160px 0 100px;
+
+}
+
+.text-title {
+    position: relative;
+    top: 21vh;
+    width: 150px;
+    color: white;
+    font-size: large;
+
+
+}
+
+.text-des {
+    color: rgb(141, 182, 169);
+    position: relative;
+    top: 22.5vh;
+    font-size: small;
+    width: 200px;
+
+
+}
+
+.project {
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgb(23, 24, 25);
+}
+
+.project h2 {
+    color: aqua;
+    margin-left: 110px;
+    padding-top: 30px;
+}
+
+.mix {
+    display: flex;
+    margin-top: 3vh;
+}
+
+.tik {
+    width: 20%;
+    height: 50vh;
+    background-color: rgb(46, 53, 61);
+    margin: 5vh 0 0 150px;
+}
+
+.tik h4 {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: large;
+}
+
+.tik p {
+    color: rgb(141, 182, 169);
+    font-size: small;
+    padding: 20px 10px 0 10px;
+
+}
+
+.play {
+    width: 80px;
+    background-color: transparent;
+    border: 1px solid aquamarine;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 80px 0 0 90px;
+    color: aquamarine;
+}
+
+.play:hover {
+    background-color: aqua;
+    transition: .3s ease;
+    color: black;
+}
+
+.play:active {
+    background-color: #0c8d44;
+    border-color: transparent;
+    color: black;
+}
+
+.stop {
+    width: 20%;
+    height: 50vh;
+    background-color: rgb(46, 53, 61);
+    margin: 5vh 0 0 130px;
+}
+
+.stop h4 {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: large;
+}
+
+.stop p {
+    color: rgb(141, 182, 169);
+    font-size: small;
+    padding: 20px 10px 0 10px;
+}
+
+.weather {
+    width: 20%;
+    height: 50vh;
+    background-color: rgb(46, 53, 61);
+    margin: 5vh 20px 0 120px;
+}
+
+.weather h4 {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: large;
+}
+
+.weather p {
+    color: rgb(141, 182, 169);
+    font-size: small;
+    padding: 20px 10px 0 10px;
+}
+
+.Experience {
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgb(23, 24, 25);
+}
+
+.Experience h2 {
+    color: aqua;
+    margin-left: 110px;
+    padding-top: 35px;
+}
+
+.Experience .exp {
+    max-width: 70%;
+    height: 60vh;
+    background-color: rgb(46, 53, 61);
+    margin: 10vh 0 0 15%;
+}
+
+.exp h3 {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+.exp p {
+    width: 80%;
+    margin: 40px 0 0 10%;
+    color: rgb(141, 182, 169);
+}
+
+.skills {
+    max-width: 100%;
+    height: 60vh;
+    background-color: rgb(23, 24, 25);
+}
+
+.ok {
+    background-color: white;
+    margin: 5px 0 0 0;
+    max-width: 100%;
+    height: 60vh;
+}
+
+.ok h2 {
+    color: aqua;
+    margin-left: 110px;
+    padding-top: 35px;
+    color: rgb(23, 24, 25);
+
+
+}
+
+.img {
+    margin: 5px 0 0 100px;
+}
+
+.footer {
+    max-width: 100%;
+    height: 50vh;
+    background-color: rgb(3, 22, 41);
+}
+
+
+.last {
+    display: flex;
+    padding-top: 40px;
+    padding-left: 60px;
+
+}
+
+.email {
+    color: white;
+    margin: 0 0 0 80px;
+}
+
+.email p:nth-child(1) {
+    margin: 5vh 0 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.op {
+    margin: 3vh 0 0 250px;
+    gap: 80px;
+}
+
+
+.op li {
+    list-style: none;
+    padding: 5px;
+}
+
+.op li a {
+    text-decoration: solid;
+    font-size: 1rem;
+    /** 16 px */
+    color: white;
+    font-weight: bold;
+}
+
+.op li a:hover {
+    color: aqua;
+}
+
+.op li a:active {
+    color: aquamarine;
+}
+
+.icon {
+    margin: 3vh 0 0 300px;
+}
+
+.icon .icons {
+    gap: 10px;
+}
+
+.icons p {
+    color: white;
+    font-size: small;
+}
+
+.foot-text {
+    color: darkgray;
+    background-color: #021121;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    text-align: center;
+    bottom: 0;
+}
